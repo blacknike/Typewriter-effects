@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Typewriter</title>
+<script>
+<!--
+var i = 0
+var showString= "On hot days like today, and throughout the summer months, many Victorians will head to the Mornington Peninsula to enjoy the sun, sand, cafes and vineyards. In the latest edition of Police Life magazine we follow Mornington police as they cover all bases from bitumen to bay, keeping the community safe. Check out the full story in the Summer edition of the Police Life magazine OUT NOW! → http://bit.ly/2jCEIfA"
+function typewriter()
+{
+var stringLength= showString.length
+textform.show.value= textform.show.value + showString.charAt(i)
+i++
+var timeID= setTimeout("typewriter()",70)
+if (i >= stringLength){
+	clearTimeout(timeID); 
+	i=0; 
+	location.href="http://bit.ly/2jCEIfA";
+  }
+}
+
+//-->
+</script>
+</head>
+<body onLoad= "typewriter()">
+<form name="textform" style="margin-left:300px">
+<textarea rows=10 cols=70 wrap="virtual" name="show" ></textarea>
+</form>
+</body>
+</html>
